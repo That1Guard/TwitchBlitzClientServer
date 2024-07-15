@@ -1,0 +1,220 @@
+{
+	"Countdown": 30,
+	"CurrentOptions": 3,
+	"options": [
+		{
+			"Name": "Spawn a 'Key'",
+			"Command": "command: spawnitem",
+			"SubItemTypes": [
+				"key",
+				"key1",
+				"key2",
+				"key3",
+				"key4",
+				"key5"
+			]
+		},
+		{
+			"Name": "Toggle X-Ray Mode",
+			"Command": "command: wireframe twitch",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Random Teleport",
+			"Command": "command: teleport",
+			"SubItemTypes": [
+				"room2ccont",
+				"173",
+				"pocketdimension"
+			]
+		},
+		{
+			"Name": "Endless Stamina",
+			"Command": "command: infinitestamina",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Toggle Warhead Lever's",
+			"Command": "command: toggle_warhead_lever",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Death is near, Player",
+			"Command": "command: kill",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Toggle NoTarget",
+			"Command": "command: notarget twitch",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Teleport 173 to Player",
+			"Command": "command: teleport173",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Teleport 106 to Player",
+			"Command": "command: teleport106",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Something in my eye",
+			"Command": "command: setblinkeffect 7 100 2 15000",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "A non-blinking Champ",
+			"Command": "command: setblinkeffect 0 100 2 30000",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Got some of that good shit?",
+			"Command": "command: scp-420-j",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Go Straight To PD, Don't Pass Go",
+			"Command": "command: teleport pocketdimension",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Toggle the pow'a of Sanic!",
+			"Command": "command: sanic twitch",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Toggle 173 Halloween Drip",
+			"Command": "command: halloween",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Pass the Stimpack",
+			"Command": "command: heal",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Toggle Remote Door Exits",
+			"Command": "command: toggleremotedoor",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Uh, I feel sick...",
+			"Command": "command: vomit",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Autosaving...",
+			"Command": "command: savegame",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Place a random items in Inventory",
+			"Command": "command: spawniteminventory",
+			"SubItemTypes": [
+				"key",
+				"key1",
+				"key2",
+				"Playing Card",
+				"Mastercard",
+				"Document SCP-079",
+				"Drawing",
+				"Leaflet",
+				"Document SCP-012",
+				"vest",
+				"finevest",
+				"veryfinevest",
+				"hazmatsuit",
+				"hazmatsuit2",
+				"hazmatsuit3",
+				"emptycup",
+				"firstaid",
+				"finefirstaid",
+				"firstaid2",
+				"veryfinefirstaid",
+				"gasmask",
+				"supergasmask",
+				"gasmask3",
+				"Origami",
+				"SCP-148 Ingot",
+				"Metal Panel",
+				"Electronical components",
+				"S-NAV 300 Navigator",
+				"S-NAV Navigator",
+				"S-NAV Navigator Ultimate",
+				"S-NAV 310 Navigator",
+				"radio",
+				"fineradio",
+				"veryfineradio",
+				"18vradio",
+				"cigarette",
+				"Smelly Joint",
+				"Joint",
+				"hand",
+				"hand2",
+				"bat",
+				"18vbat",
+				"killbat",
+				"fineeyedrops",
+				"supereyedrops",
+				"ReVision Eyedrops",
+				"RedVision Eyedrops",
+				"scp513",
+				"1123",
+				"clipboard",
+				"supernv",
+				"nvgoggles",
+				"finenvgoggles",
+				"syringe",
+				"finesyringe",
+				"veryfinesyringe",
+				"Emily Ross' Badge",
+				"Old Badge",
+				"oldpaper",
+				"coin",
+				"ticket",
+				"25ct",
+				"pill",
+				"scp500death",
+				"Sticky Note",
+				"The Modular Site Project",
+				"Research Sector-02 Scheme",
+				"Document SCP-427",
+				"scp500",
+				"Mobile Task Forces",
+				"Mysterious Note",
+				"Journal Page",
+				"Strange Note",
+				"Burnt Note",
+				"Document SCP-035",
+				"Document SCP-513",
+				"Incident Report SCP-1048-A",
+				"Dr. Allok's Note",
+				"SCP-093 Recovered Materials"
+			]
+		},
+		{
+			"Name": "Hands up! Drop what you got!",
+			"Command": "command: teleport",
+			"SubItemTypes": [
+				"room2ccont",
+				"173"
+			]
+		},
+		{
+			"Name": "I am Invincible!",
+			"Command": "command: god twitch",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Got Zombie [Bite]?",
+			"Command": "command: savegame",
+			"SubItemTypes": []
+		},
+		{
+			"Name": "Ring the summoning Cowbell",
+			"Command": "command: summoncows",
+			"SubItemTypes": []
+		}
+	]
+}

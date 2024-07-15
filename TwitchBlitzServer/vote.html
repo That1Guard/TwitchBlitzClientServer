@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        #vote-options {
+            margin-top: 20px;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        .timer {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="vote-options"></div>
+    <div class="timer" id="timer">30s remaining</div>
+
+    <script>
+        let socket = new WebSocket("ws://localhost:8080/vote");
+        let currentOptions = {};
+
+        socket.onmessage = function (event) {
+            let message = JSON.parse(event.data);
+            if (message.type === "voteStart") {
+                displayOptions(message.options);
+                startTimer(message.duration);
+            } else if (message.type === "voteUpdate") {
+                updateVotes(message.votes, message.optionNames);
+            } else if (message.type === "voteEnd") {
+                displayResults(message.votes);
+            }
+        };
+
+        function displayOptions(options) {
+            let optionsContainer = document.getElementById('vote-options');
+            optionsContainer.innerHTML = '';
+            currentOptions = {};
+            options.forEach((option, index) => {
+                currentOptions[(index + 1).toString()] = option;
+                let optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                optionElement.id = `option-${index + 1}`;
+                optionElement.textContent = `${index + 1}: ${option}`;
+                optionsContainer.appendChild(optionElement);
+            });
+        }
+
+        function updateVotes(votes, optionNames) {
+            for (let [option, count] of Object.entries(votes)) {
+                let optionElement = document.getElementById(`option-${option}`);
+                if (optionElement) {
+                    optionElement.textContent = `${option}: ${optionNames[option]} - ${count} votes`;
+                }
+            }
+        }
+
+        function displayResults(votes) {
+            let optionsContainer = document.getElementById('vote-options');
+            optionsContainer.innerHTML = '<h2>Voting Ended</h2>';
+            for (let [option, count] of Object.entries(votes)) {
+                let resultElement = document.createElement('div');
+                resultElement.className = 'option';
+                resultElement.textContent = `${option}: ${currentOptions[option]} - ${count} votes`;
+                optionsContainer.appendChild(resultElement);
+            }
+            document.getElementById('timer').textContent = '';
+        }
+
+        function startTimer(duration) {
+            let timerElement = document.getElementById('timer');
+            let timeRemaining = duration;
+            timerElement.textContent = `${timeRemaining}s remaining`;
+
+            let timerInterval = setInterval(() => {
+                timeRemaining--;
+                timerElement.textContent = `${timeRemaining}s remaining`;
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

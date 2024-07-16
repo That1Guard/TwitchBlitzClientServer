@@ -100,7 +100,7 @@
 		},
 		{
 			"Name": "Uh, I feel sick...",
-			"Command": "command: vomit",
+			"Command": "command: vomit 30",
 			"SubItemTypes": []
 		},
 		{
@@ -195,11 +195,8 @@
 		},
 		{
 			"Name": "Hands up! Drop what you got!",
-			"Command": "command: teleport",
-			"SubItemTypes": [
-				"room2ccont",
-				"173"
-			]
+			"Command": "command: drop_pockets",
+			"SubItemTypes": []
 		},
 		{
 			"Name": "I am Invincible!",
@@ -208,7 +205,7 @@
 		},
 		{
 			"Name": "Got Zombie [Bite]?",
-			"Command": "command: savegame",
+			"Command": "command: infect 1",
 			"SubItemTypes": []
 		},
 		{
